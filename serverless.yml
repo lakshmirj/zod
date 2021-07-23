@@ -32,4 +32,4 @@ resources:
         DemoBucketUpload:
             Type: AWS::S3::Bucket
             Properties:
-                BucketName: myserverlessprojectuploadbucket-123123
+                BucketName: myserverlessprojectuploadbucket-1231231111111
