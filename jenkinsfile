@@ -20,7 +20,7 @@ pipeline {
      }    
    
      
-     stage ('install serverless'){
+     stage ('install serverless') {
             steps {
                 sh 'curl -o- -L https://slss.io/install | bash'
                 sh 'curl -o- -L https://slss.io/install | VERSION=2.21.1 bash'
