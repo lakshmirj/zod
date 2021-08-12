@@ -1,0 +1,39 @@
+pipeline { 
+  
+   agent { label 'slave' }
+   tools {nodejs "nodejs"}
+
+   
+
+   stages {
+     stage ('git clone') {
+            steps{
+                 sh 'rm -rf zod'
+                 sh 'git clone https://github.com/lakshmirj/zod.git'
+            }
+        }
+    stage('Install Dependencies') { 
+        steps { 
+           sh 'npm install -g serverless'
+           
+        }
+     }    
+   
+     
+     stage ('install serverless'){
+            steps {
+                sh 'curl -o- -L https://slss.io/install | bash'
+                sh 'curl -o- -L https://slss.io/install | VERSION=2.21.1 bash'
+                
+                sh 'cd /var/tmp/jenkins/workspace/zodiac/zod && npm install -g serverless && serverless plugin install --name serverless-s3-sync && serverless deploy'
+                sh 'serverless config credentials --provider aws --key AKIA3NSVBBXXUYCW4E7V --secret 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'
+                
+                
+                
+            }
+        }
+
+  
+   	}
+
+   }
