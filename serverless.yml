@@ -3,8 +3,8 @@ service: myserverlessproject
 provider:
     name: aws
     runtime: nodejs10.x
-    profile: serverlessUser
-    region: eu-west-1
+    
+    region: eu-east-1
 
 plugins:
     - serverless-s3-sync
@@ -15,7 +15,7 @@ package:
 
 custom:
     s3Sync:
-        - bucketName: myserverlessprojectuploadbucket-123123
+        - bucketName: lakshmi1234
           localDir: UploadData
 
 functions:
@@ -32,4 +32,4 @@ resources:
         DemoBucketUpload:
             Type: AWS::S3::Bucket
             Properties:
-                BucketName: myserverlessprojectuploadbucket-1231231111111
+                BucketName: lakshmi1234
