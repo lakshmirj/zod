@@ -15,7 +15,7 @@ package:
 
 custom:
     s3Sync:
-        - bucketName: lakshmi1234
+        - bucketName: lakshmi12345
           localDir: UploadData
 
 functions:
@@ -32,4 +32,4 @@ resources:
         DemoBucketUpload:
             Type: AWS::S3::Bucket
             Properties:
-                BucketName: lakshmi1234
+                BucketName: lakshmi12345
