@@ -1,2 +1,2 @@
 # zod 2
-hry
+hry u
