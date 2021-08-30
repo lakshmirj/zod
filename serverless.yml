@@ -32,4 +32,4 @@ resources:
         DemoBucketUpload:
             Type: AWS::S3::Bucket
             Properties:
-                BucketName: lakshmi12345
+                BucketName: lakshmi123451111111111
